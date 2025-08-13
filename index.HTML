@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Physics Solver – Static SPA</title>
+  <meta name="description" content="A single-page Physics Solver with equations, topics, and history." />
+  <link rel="canonical" href="/static-spa/" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#/">
+        <span class="logo-circle">Φ</span>
+        <span class="brand-text">Physics Solver</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="#/history" aria-label="History">History</a>
+        <a class="btn btn-outline" href="#/help" aria-label="Help">Help</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="app" class="app-root">
+    <noscript>
+      This app requires JavaScript to run. Please enable JavaScript in your browser.
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Physics Solver. All rights reserved.</p>
+  </footer>
+
+  <!-- mathjs CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@13.2.3/lib/browser/math.min.js"></script>
+  <!-- app logic -->
+  <script src="./script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
